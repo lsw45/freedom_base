@@ -17,17 +17,16 @@ import (
 
 func main() {
 	app := freedom.NewApplication()
-	/*
-		installDatabase(app)
-		installRedis(app)
 
-		HTTP/2 h2c Runner
-		runner := app.NewH2CRunner(conf.Get().App.Other["listen_addr"].(string))
-		HTTP/2 AutoTLS Runner
-		runner := app.NewAutoTLSRunner(":443", "freedom.com www.freedom.com", "freedom@163.com")))
-		HTTP/2 TLS Runner
-		runner := app.NewTLSRunner(":443", "certFile", "keyFile")))
-	*/
+	installDatabase(app)
+	//installRedis(app)
+
+	//HTTP/2 h2c Runner
+	//runner := app.NewH2CRunner(conf.Get().App.Other["listen_addr"].(string))
+	//HTTP/2 AutoTLS Runner
+	//runner := app.NewAutoTLSRunner(":443", "freedom.com www.freedom.com", "freedom@163.com")))
+	//HTTP/2 TLS Runner
+	//runner := app.NewTLSRunner(":443", "certFile", "keyFile")))
 
 	installMiddleware(app)
 	addrRunner := app.NewRunner(conf.Get().App.Other["listen_addr"].(string))
