@@ -4,13 +4,12 @@ package main
 import (
 	"time"
 
-	"freedom/server/conf"
-
 	"freedom"
 	_ "freedom/adapter/controller"
 	_ "freedom/adapter/repository"
 	"freedom/infra/requests"
 	"freedom/middleware"
+	"freedom/server/conf"
 	"github.com/go-redis/redis"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
